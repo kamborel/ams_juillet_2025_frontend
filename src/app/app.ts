@@ -7,5 +7,11 @@ import { Component, signal } from '@angular/core';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('ams');
+
+  formation:string = "Formation FullStack Sprint Angular & Devops";
+
+  nom:string = "kamdem tagne thomas borel";
+  email:string = "borelkamdem@gmail.com";
+
+  noms:string[] = ["borel", "aminE", "josepH", "moïse", "nathaN"];
 }
