@@ -6,6 +6,8 @@ import { App } from './app';
 import { Home } from './home/home';
 import { AddIngPipe } from './pipes/add-ing-pipe';
 import { FirstLetterUppercasePipe } from './pipes/first-letter-uppercase-pipe';
+import { User } from './user/user';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -13,6 +15,7 @@ import { FirstLetterUppercasePipe } from './pipes/first-letter-uppercase-pipe';
     Home,
     AddIngPipe,
     FirstLetterUppercasePipe,
+    User,
   ],
   imports: [
     BrowserModule,
@@ -20,7 +23,8 @@ import { FirstLetterUppercasePipe } from './pipes/first-letter-uppercase-pipe';
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
-    provideZonelessChangeDetection()
+    provideZonelessChangeDetection(),
+    provideHttpClient(withInterceptorsFromDi())
   ],
   bootstrap: [App]
 })

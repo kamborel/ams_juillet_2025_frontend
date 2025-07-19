@@ -1,1 +1,29 @@
-<p>home works!</p>
+<h2>Composant home</h2>
+ 
+  <div class="container mt-4">
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped table-hover text-center align-middle">
+            <caption class="caption-top text-center fw-bold">Liste des Fournisseurs</caption>
+            <thead class="table-dark">
+              <tr>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Email</th>
+                <th>Adresse</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let provider of providers">
+                <td>{{provider.id}}</td>
+                <td>{{provider.name}}</td>
+                <td>{{provider.email}}</td>
+                <td>{{provider.address}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>

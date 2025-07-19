@@ -1,0 +1,39 @@
+<ng-container *ngIf="listUsers | async as users">
+
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="table-responsive">
+            <table *ngIf="users.length > 0; else noUsers" class="table table-bordered table-striped table-hover text-center align-middle">
+                <caption class="caption-top text-center fw-bold">Liste des Users</caption>
+                <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Nom</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Street</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let user of users">
+                    <td>{{user.id}}</td>
+                    <td>{{user.name}}</td>
+                    <td>{{user.username}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.phone}}</td>
+                    <td>{{user.address.street}}</td>
+                </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+        </div>
+    </div>
+</ng-container>
+
+<!-- Message si aucun user trouvé -->
+<ng-template #noUsers>
+    <p style="text-align: center;"> Aucun user trouvé.</p>
+</ng-template>
