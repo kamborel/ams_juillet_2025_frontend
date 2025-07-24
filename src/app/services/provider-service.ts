@@ -11,11 +11,20 @@ export class ProviderService {
     return this.http.get('http://localhost:8080/providers/');
   }
 
-   addProviders(provider:any){
+  addProviders(provider:any){
     return this.http.post('http://localhost:8080/providers/', provider);
   }
 
   deleteProviders(id:any){
     return this.http.delete('http://localhost:8080/providers/'+id);
   }
+
+  getProvidersById(id:any){
+    return this.http.get('http://localhost:8080/providers/'+id);
+  }
+
+  updateProvider(provider:any){
+    return this.http.put('http://localhost:8080/providers/', provider);
+  }
+  
 }

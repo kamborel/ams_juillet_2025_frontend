@@ -10,6 +10,7 @@ import { ListProvider } from './list-provider/list-provider';
 import { AddProvider } from './add-provider/add-provider';
 import { Navbar } from './navbar/navbar';
 import { FormsModule } from '@angular/forms';
+import { UpdateProvider } from './update-provider/update-provider';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { FormsModule } from '@angular/forms';
     User,
     ListProvider,
     Navbar,
+    UpdateProvider,
   ],
   imports: [
     BrowserModule,

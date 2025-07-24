@@ -20,15 +20,12 @@ export class AddProvider implements OnInit{
   }
 
     saveProvider(provider:any){
-
-      console.log(provider);
-      
+ 
       this.providerService.addProviders(provider).subscribe({
         next: (data:any) => {
-          console.log("ok"); 
           //const btn = document.getElementById('listProviders');
           //btn?.click();
-          this.router.navigate(['providers/']);
+          this.router.navigate(['providers']);
         },
         error: (err) => {
           console.error('Erreur Ajout provider', err);

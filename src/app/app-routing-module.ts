@@ -3,10 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddProvider} from './add-provider/add-provider';
 import { User } from './user/user';
 import { ListProvider } from './list-provider/list-provider';
+import { UpdateProvider } from './update-provider/update-provider';
 
 const routes: Routes = [
   {
-    path:"addprovider",
+    path:"addProvider",
     component:AddProvider
   },
   {
@@ -15,7 +16,11 @@ const routes: Routes = [
   },
   {
     path:"providers",
-    component:ListProvider
+    component:ListProvider,
+  },
+  {
+    path:"updateProviders/:id",
+    component:UpdateProvider
   }
 ];
 
